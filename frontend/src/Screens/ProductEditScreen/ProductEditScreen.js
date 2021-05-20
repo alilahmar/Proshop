@@ -56,6 +56,10 @@ const ProductEditScreen = ({ match, history }) => {
     // user inside the dependencies to get the user input
   }, [dispatch, history, productId, product, successUpdate]);
 
+  useEffect(() => {
+    console.log("Jothan Image", image);
+  }, [image]);
+
   // uploading Image //
   const uploadFileHandler = async (e) => {
     const file = e.target.files[0];
